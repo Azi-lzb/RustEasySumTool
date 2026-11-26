@@ -1,0 +1,26 @@
+# Local tools and generated output
+/.build/
+/.venv/
+/.venv-*/
+/.zcode/
+/dist/
+target/
+test-results/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and temporary files
+.env
+.env.*
+!.env.example
+*.log
+~$*
+*.tmp
+.DS_Store
+Thumbs.db
+Desktop.ini
