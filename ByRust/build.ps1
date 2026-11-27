@@ -29,9 +29,9 @@ New-Item -ItemType Directory -Path $distribution -Force | Out-Null
 $executable = Join-Path $distribution "Excel 模板汇总工具_Rust_v$version.exe"
 Copy-Item -LiteralPath (Join-Path $metadata.target_directory 'release/excel-summary-rust.exe') -Destination $executable -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'config.xlsx') -Destination (Join-Path $distribution 'config.xlsx') -Force
-$manual = Join-Path $rustProject 'Rust使用与集成说明.docx'
-if (-not (Test-Path -LiteralPath $manual)) { throw '缺少Rust使用与集成说明.docx，请先生成说明。' }
-$manualOutput = Join-Path $distribution 'Rust使用与集成说明.docx'
+$manual = Join-Path $projectRoot '使用说明.docx'
+if (-not (Test-Path -LiteralPath $manual)) { throw '缺少使用说明.docx，请将Word使用说明放在项目根目录。' }
+$manualOutput = Join-Path $distribution '使用说明.docx'
 Copy-Item -LiteralPath $manual -Destination $manualOutput -Force
 $zipPath = Join-Path $distribution 'Excel 模板汇总工具_Rust.zip'
 Compress-Archive -LiteralPath @($executable,(Join-Path $distribution 'config.xlsx'),$manualOutput) -DestinationPath $zipPath -Force
