@@ -56,25 +56,17 @@ fn execute(request: AggregationRequest, json: bool, cancel: &AtomicBool) -> bool
             Ok(result) => {
                 println!("已生成：{}", result.output_path.display());
                 println!(
-                    "来源文件 {} 份，汇总指令 {} 个，提醒 {} 项。",
-                    result.source_count,
-                    result.rule_count,
-                    result.warning_count()
+                    "来源文件 {} 份，汇总指令 {} 个。",
+                    result.source_count, result.rule_count
                 );
-                for issue in result
-                    .issues
-                    .iter()
-                    .filter(|issue| issue.severity == excel_summary::model::Severity::Warning)
-                {
-                    println!(
-                        "{}!{}：{}",
-                        issue.template_sheet, issue.template_cell, issue.message
-                    );
-                }
             }
             Err(error) => {
                 eprintln!("{}", error.message);
-                for issue in &error.issues {
+                for issue in error
+                    .issues
+                    .iter()
+                    .filter(|issue| issue.severity == excel_summary::model::Severity::Error)
+                {
                     eprintln!(
                         "[{}] 模板 {}!{} 源 {} {}!{}：{}",
                         issue.code,

@@ -1,0 +1,322 @@
+{
+  "timestamp_local": "2026-11-27T08:00:14.887030",
+  "timezone": "Asia/Shanghai",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.16 (main, Oct 26 2026, 14:10:56) [MSC v.1944 64 bit (AMD64)]",
+  "repeats": 5,
+  "warmup_runs_per_runtime_per_case": 1,
+  "method": "Sequential fresh processes; one warmup, alternating order; warm OS file cache; unique output; perf_counter wall time and engine duration_seconds; fixture generation/validation excluded.",
+  "binary_sha256": {
+    "python": "fa13a363e71afceec984d299534d41713d5253e059b3248bb65c64dabb272452",
+    "rust": "021b09b09aaf8e03281ff81d3dc30f11e988b295c2274ca082265748ebfe066e"
+  },
+  "cases": [
+    {
+      "name": "small_demo",
+      "source_count": 3,
+      "rule_count": 61,
+      "source_rows": null,
+      "source_columns": null,
+      "source_bytes": 27969,
+      "results_verified": true,
+      "runtimes": {
+        "python_source": {
+          "wall": {
+            "median_seconds": 0.40954610001062974,
+            "min_seconds": 0.373789899982512,
+            "max_seconds": 0.45424700004514307,
+            "samples_seconds": [
+              0.40954610001062974,
+              0.45424700004514307,
+              0.4120996000128798,
+              0.373789899982512,
+              0.40946870000334457
+            ]
+          },
+          "engine": {
+            "median_seconds": 0.09709789999760687,
+            "min_seconds": 0.08476769999833778,
+            "max_seconds": 0.10215120000066236,
+            "samples_seconds": [
+              0.09068739996291697,
+              0.09709789999760687,
+              0.09749270003521815,
+              0.08476769999833778,
+              0.10215120000066236
+            ]
+          }
+        },
+        "rust_release_json": {
+          "wall": {
+            "median_seconds": 0.07393530005356297,
+            "min_seconds": 0.0658881000126712,
+            "max_seconds": 0.0833938000141643,
+            "samples_seconds": [
+              0.07393530005356297,
+              0.08112699998309836,
+              0.0658881000126712,
+              0.0833938000141643,
+              0.07268720003776252
+            ]
+          },
+          "engine": {
+            "median_seconds": 0.0546236,
+            "min_seconds": 0.04336,
+            "max_seconds": 0.0623274,
+            "samples_seconds": [
+              0.0455702,
+              0.0623274,
+              0.04336,
+              0.0621033,
+              0.0546236
+            ]
+          }
+        },
+        "python_packaged_cli": {
+          "wall": {
+            "median_seconds": 2.2032966999686323,
+            "min_seconds": 2.140149199985899,
+            "max_seconds": 2.2560547000030056,
+            "samples_seconds": [
+              2.140149199985899,
+              2.163791500031948,
+              2.2032966999686323,
+              2.2154272999614477,
+              2.2560547000030056
+            ]
+          },
+          "engine": null
+        },
+        "rust_packaged_cli": {
+          "wall": {
+            "median_seconds": 0.08164230000693351,
+            "min_seconds": 0.06372069998178631,
+            "max_seconds": 0.08815009996760637,
+            "samples_seconds": [
+              0.07847300003049895,
+              0.08164230000693351,
+              0.06372069998178631,
+              0.08815009996760637,
+              0.08423630002653226
+            ]
+          },
+          "engine": null
+        }
+      },
+      "python_over_rust_engine_ratio": 1.777581484882118,
+      "python_over_rust_packaged_ratio": 26.987195360511848
+    },
+    {
+      "name": "medium",
+      "source_count": 30,
+      "rule_count": 400,
+      "source_rows": 200,
+      "source_columns": 20,
+      "source_bytes": 699093,
+      "results_verified": true,
+      "runtimes": {
+        "python_source": {
+          "wall": {
+            "median_seconds": 0.988614600035362,
+            "min_seconds": 0.971966799988877,
+            "max_seconds": 1.0266911000362597,
+            "samples_seconds": [
+              0.994562300038524,
+              0.971966799988877,
+              0.972495699999854,
+              0.988614600035362,
+              1.0266911000362597
+            ]
+          },
+          "engine": {
+            "median_seconds": 0.6559973999974318,
+            "min_seconds": 0.6433161000022665,
+            "max_seconds": 0.6732707999763079,
+            "samples_seconds": [
+              0.6732707999763079,
+              0.6433161000022665,
+              0.6559973999974318,
+              0.6482874999637716,
+              0.6629394000046887
+            ]
+          }
+        },
+        "rust_release_json": {
+          "wall": {
+            "median_seconds": 0.27755850000539795,
+            "min_seconds": 0.26430590002564713,
+            "max_seconds": 0.30815830000210553,
+            "samples_seconds": [
+              0.27755850000539795,
+              0.26911760005168617,
+              0.2805207999772392,
+              0.26430590002564713,
+              0.30815830000210553
+            ]
+          },
+          "engine": {
+            "median_seconds": 0.254879,
+            "min_seconds": 0.2376842,
+            "max_seconds": 0.2799718,
+            "samples_seconds": [
+              0.254879,
+              0.2484412,
+              0.25906,
+              0.2376842,
+              0.2799718
+            ]
+          }
+        },
+        "python_packaged_cli": {
+          "wall": {
+            "median_seconds": 2.8015042999759316,
+            "min_seconds": 2.773294100014027,
+            "max_seconds": 2.8933935000095516,
+            "samples_seconds": [
+              2.8477441999712028,
+              2.7837620000354946,
+              2.8933935000095516,
+              2.773294100014027,
+              2.8015042999759316
+            ]
+          },
+          "engine": null
+        },
+        "rust_packaged_cli": {
+          "wall": {
+            "median_seconds": 0.28330469998763874,
+            "min_seconds": 0.2716103999991901,
+            "max_seconds": 0.3195621000486426,
+            "samples_seconds": [
+              0.28330469998763874,
+              0.2871445000055246,
+              0.3195621000486426,
+              0.27590469998540357,
+              0.2716103999991901
+            ]
+          },
+          "engine": null
+        }
+      },
+      "python_over_rust_engine_ratio": 2.5737600979187447,
+      "python_over_rust_packaged_ratio": 9.888661572145354
+    },
+    {
+      "name": "large",
+      "source_count": 100,
+      "rule_count": 1000,
+      "source_rows": 500,
+      "source_columns": 20,
+      "source_bytes": 5205741,
+      "results_verified": true,
+      "runtimes": {
+        "python_source": {
+          "wall": {
+            "median_seconds": 4.359519299992826,
+            "min_seconds": 4.308451100019738,
+            "max_seconds": 4.559920300031081,
+            "samples_seconds": [
+              4.325377699977253,
+              4.308451100019738,
+              4.377288400020916,
+              4.559920300031081,
+              4.359519299992826
+            ]
+          },
+          "engine": {
+            "median_seconds": 4.024728399992455,
+            "min_seconds": 3.9990906000020914,
+            "max_seconds": 4.235246399999596,
+            "samples_seconds": [
+              4.015848200011533,
+              3.9990906000020914,
+              4.031719999969937,
+              4.235246399999596,
+              4.024728399992455
+            ]
+          }
+        },
+        "rust_release_json": {
+          "wall": {
+            "median_seconds": 1.4947178000002168,
+            "min_seconds": 1.4583044000319205,
+            "max_seconds": 1.5378414999577217,
+            "samples_seconds": [
+              1.5303939000004902,
+              1.4583044000319205,
+              1.4766966999741271,
+              1.5378414999577217,
+              1.4947178000002168
+            ]
+          },
+          "engine": {
+            "median_seconds": 1.4631424,
+            "min_seconds": 1.4312055,
+            "max_seconds": 1.5023062999999999,
+            "samples_seconds": [
+              1.5023062999999999,
+              1.4312055,
+              1.4499819,
+              1.5014368999999999,
+              1.4631424
+            ]
+          }
+        },
+        "python_packaged_cli": {
+          "wall": {
+            "median_seconds": 6.182850000041071,
+            "min_seconds": 6.126946900039911,
+            "max_seconds": 6.279576400003862,
+            "samples_seconds": [
+              6.126946900039911,
+              6.182850000041071,
+              6.279576400003862,
+              6.175952700024936,
+              6.227847800008021
+            ]
+          },
+          "engine": null
+        },
+        "rust_packaged_cli": {
+          "wall": {
+            "median_seconds": 1.5101266999845393,
+            "min_seconds": 1.4973027000087313,
+            "max_seconds": 1.5342391000012867,
+            "samples_seconds": [
+              1.5116778999799863,
+              1.4973027000087313,
+              1.5101266999845393,
+              1.5342391000012867,
+              1.5034343000152148
+            ]
+          },
+          "engine": null
+        }
+      },
+      "python_over_rust_engine_ratio": 2.7507427848392987,
+      "python_over_rust_packaged_ratio": 4.094259110910609
+    }
+  ],
+  "versions": {
+    "python_source": "3.12.16",
+    "python_openpyxl": "3.1.5",
+    "python_calamine": "0.9.1",
+    "python_packaged": "Excel 模板汇总工具 0.6.1",
+    "rust_packaged": "Excel 模板汇总工具 Rust 0.6.2",
+    "rust_crates": {
+      "bigdecimal": "0.4.11",
+      "calamine": "0.38.0",
+      "umya-spreadsheet": "3.1.1"
+    }
+  },
+  "machine": {
+    "logical_processors": 32,
+    "physical_cores": 24,
+    "memory_bytes": 16858472448,
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13900HX"
+  },
+  "completed": true,
+  "input_hashes_verified": true,
+  "all_outputs_verified": true,
+  "ordinary_cli_warnings_absent": true
+}
